@@ -1,5 +1,5 @@
 
-# 自己搭建的一个GAN训练框架，以DCGAN为。
+# 自己搭建的一个GAN训练框架，以DCGAN为例。
 # 此框架主要针对GAN生成图片， 后面还会陆续搭建其它框架，欢迎关注。
 
 使用说明：
@@ -15,9 +15,9 @@
 
 其中，ckpt_pb.py：ckpt转pb的代码；GANs_inference.py：生成器生成图片。
 
-下面是迭代十次的效果：
-![image](http://upload-images.jianshu.io/upload_images/4618424-3e60f74beabcd4af?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+# 下面是迭代10次的效果：
 
+![image](http://upload-images.jianshu.io/upload_images/4618424-3e60f74beabcd4af?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 对dl感兴趣，还可以关注我的博客，这是我的博客目录：（地址： http://blog.csdn.net/u014365862/article/details/78422372 ）
