@@ -15,11 +15,11 @@
 
 其中，ckpt_pb.py：ckpt转pb的代码；GANs_inference.py：生成器生成图片。
 
-训练GAN要有耐心！！！多给点时间。
-
 # 下面是迭代10次的效果：
 
-![image](http://upload-images.jianshu.io/upload_images/4618424-3e60f74beabcd4af?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image](http://upload-images.jianshu.io/upload_images/4618424-75a159be93a1adaf?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+之后更新迭代10次的效果图。
 
 
 对dl感兴趣，还可以关注我的博客，这是我的博客目录：（地址： http://blog.csdn.net/u014365862/article/details/78422372 ）
