@@ -17,7 +17,7 @@
 
 # 下面是迭代10次的效果：
 
-![image](http://upload-images.jianshu.io/upload_images/4618424-75a159be93a1adaf?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image](http://upload-images.jianshu.io/upload_images/4618424-120ee93645e8fcdd?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 之后更新迭代10次的效果图。
 
