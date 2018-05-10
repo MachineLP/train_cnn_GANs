@@ -8,13 +8,16 @@
 变量设置参考config.py。
 详细说明参见config.py。
 
-( mkdir pretrain/inception_v4, 下载与训练模型, cp到pretrain/inception_v4/ ) 
 
 运行代码： python main.py 
 
-另外此代码加了tensorboard，将在工程目录下生成 xxx_log 的文件。 然后使用：tensorboard --logdir arch_inceion_v4_rnn_attention_log查看。 后续有时间会把其它的功能加上。
+另外此代码没有加tensorboard，可以自行加上，然后使用：tensorboard --logdir #_log查看。
 
-其中，z_ckpt_pb：ckpt转pb的代码，和测试接口。
+其中，ckpt_pb.py：ckpt转pb的代码；GANs_inference.py：生成器生成图片。
+
+下面是迭代十次的效果：
+![image](http://upload-images.jianshu.io/upload_images/4618424-3e60f74beabcd4af?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 
 对dl感兴趣，还可以关注我的博客，这是我的博客目录：（地址： http://blog.csdn.net/u014365862/article/details/78422372 ）
