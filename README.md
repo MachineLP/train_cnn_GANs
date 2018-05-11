@@ -19,6 +19,10 @@
 
 ![image](http://upload-images.jianshu.io/upload_images/4618424-eaa2a647384c47f8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+# 迭代20次的效果图
+
+![image](http://upload-images.jianshu.io/upload_images/4618424-64d9c26a7fb724c2?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 之后更新迭代100次的效果图。
 
 
