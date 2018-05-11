@@ -15,6 +15,10 @@
 
 其中，ckpt_pb.py：ckpt转pb的代码；GANs_inference.py：生成器生成图片。
 
+#训练集：是以前做人脸检测在wider_face上，不同IOU的48x48的图像。生成图中模糊和角度与训练集相关。
+
+![image](http://upload-images.jianshu.io/upload_images/4618424-e57d7ffbe35a596b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 # 下面是迭代10次的效果：
 
 ![image](http://upload-images.jianshu.io/upload_images/4618424-eaa2a647384c47f8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
