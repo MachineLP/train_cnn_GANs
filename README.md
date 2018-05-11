@@ -17,7 +17,7 @@
 
 #训练集：是以前做人脸检测在wider_face上，不同IOU的48x48的图像。生成图中模糊和角度与训练集相关。
 
-![image](http://upload-images.jianshu.io/upload_images/4618424-50fc35e617e2cda4?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image](http://upload-images.jianshu.io/upload_images/4618424-822cdca66f57a6d8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 下面是迭代10次的效果：
 
