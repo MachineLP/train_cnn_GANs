@@ -149,6 +149,21 @@ def cost(logit):
     loss = sigmoid_loss(label = label, logit = logit)
     return loss
 
+'''
+  ● 判别器最后一层去掉sigmoid
+  ● 生成器和判别器的loss不取log
+  ● 每次更新判别器的参数之后把它们的绝对值截断到不超过一个固定常数c
+  ● 不要用基于动量的优化算法（包括momentum和Adam），推荐RMSProp，SGD也行
+'''
+def gan_loss_no_log(logits_real, logits_fake):
+    D_real_loss=tf.square(logits_real-1)
+    D_fake_loss=tf.square(logits_fake)
+    D_loss=tf.reduce_mean(D_real_loss+D_fake_loss)
+
+    G_loss=tf.square(logits_fake-1)
+    G_loss=tf.reduce_mean(G_loss)
+    return D_loss, G_loss
+
 def gan_loss(logits_real, logits_fake):
     # TODO: compute D_loss and G_loss
     
@@ -171,7 +186,8 @@ def train_op(learning_rate, loss, variables_to_train, global_step):
             # opt_op = optimizer_minimize(optimizer, loss, global_step)
         else:
             #opt_op = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(loss, var_list = variables_to_train, global_step=global_step)
-            optimizer = adam_optimizer(learning_rate)
+            optimizer =  rmsprop_optimizer(learning_rate)
+            # optimizer = adam_optimizer(learning_rate)
             opt_op = optimizer_minimize(optimizer, loss, global_step, var_list = variables_to_train)
     return opt_op
 
