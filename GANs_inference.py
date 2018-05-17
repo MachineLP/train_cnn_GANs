@@ -200,12 +200,17 @@ class LPAlg_conditional(object):
         sess = tf.Session()
         generator_x = sess.run(sample_noise(num_gen, dim))
         num_classes = config.num_classes
-        label = np.zeros([num_classes])
-        label[0] = 1
+        def sample_label():
+            num = num_gen
+            label_vector = np.zeros((num , num_classes), dtype=np.float)
+            for i in range(0 , num):
+                label_vector[i , i%4] = 1.0
+            return label_vector
+        label = sample_label()
         predict = self.model[idx][0].run(
             self.model[idx][5],
             feed_dict={self.model[idx][1]: generator_x,
-                       self.model[idx][2]: [label]
+                       self.model[idx][2]: label
                        # self.model[idx][3]: imgs3
                                   }
                                   )
