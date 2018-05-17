@@ -9,7 +9,7 @@ blog: http://blog.csdn.net/u014365862/article/details/78422372
 import numpy as np
 import tensorflow as tf
 slim = tf.contrib.slim
-from lib.utils.GANs_utils import build_generator, build_discriminator, cost, train_op, get_next_batch_from_path, gan_loss, preprocess_img
+from lib.utils.GANs_utils import build_generator, build_discriminator, cost, train_op, get_next_batch_from_path, gan_loss, gan_loss_no_log, preprocess_img
 from lib.utils.GANs_utils import sample_noise, generator_input_placeholder, discriminator_input_placeholder,shuffle_train_data
 import os
 import sys
