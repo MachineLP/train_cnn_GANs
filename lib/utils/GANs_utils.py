@@ -177,7 +177,10 @@ def gan_loss(logits_real, logits_fake):
     
     return D_loss, G_loss
 
-
+'''
+generator_opt = tf.train.RMSPropOptimizer(gen_lr, decay=.9, momentum=0.1)
+discriminator_opt = tf.train.RMSPropOptimizer(dis_lr, decay=.95, momentum=0.1)
+'''
 def train_op(learning_rate, loss, variables_to_train, global_step):
     update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
     with tf.control_dependencies(update_ops):
