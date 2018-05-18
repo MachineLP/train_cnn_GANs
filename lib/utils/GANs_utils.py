@@ -190,8 +190,8 @@ def train_op(learning_rate, loss, variables_to_train, global_step):
             # opt_op = optimizer_minimize(optimizer, loss, global_step)
         else:
             #opt_op = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(loss, var_list = variables_to_train, global_step=global_step)
-            optimizer =  rmsprop_optimizer(learning_rate)
-            # optimizer = adam_optimizer(learning_rate)
+            # optimizer =  rmsprop_optimizer(learning_rate)
+            optimizer = adam_optimizer(learning_rate)
             opt_op = optimizer_minimize(optimizer, loss, global_step, var_list = variables_to_train)
     return opt_op
 
