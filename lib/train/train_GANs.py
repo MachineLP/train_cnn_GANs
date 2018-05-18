@@ -190,7 +190,8 @@ def train_GANs(train_data,train_label,valid_data,valid_label,train_dir,num_class
         for batch_i in range(int(valid_n/batch_size)):
             generator_x = sess.run(sample_noise(batch_size, dim))
             if arch_model == "arch_dcgan_unconditional":
-                G_epoch_ls, G_samples = sess.run([G_loss, G_net], feed_dict={G_X: generator_x, G_keep_prob_fc:1.0, G_is_train:False})
+                images, labels = get_next_batch_from_path(valid_data, valid_label, batch_i%(int(valid_n/batch_size)), height, width, batch_size=batch_size, training=False)
+                G_epoch_ls, G_samples = sess.run([G_loss, G_net], feed_dict={G_X: generator_x, G_keep_prob_fc:1.0, G_is_train:False, D_X: images,D_is_train:False, D_keep_prob_fc:1.0})
             elif arch_model == "arch_dcgan_conditional":
                 images, labels = get_next_batch_from_path(valid_data, valid_label, batch_i%(int(valid_n/batch_size)), height, width, batch_size=batch_size, training=False)
                 G_epoch_ls, G_samples = sess.run([G_loss, G_net], feed_dict={G_X: generator_x, G_Y:labels, G_keep_prob_fc:1.0, G_is_train:False, D_X: images,D_is_train:False, D_keep_prob_fc:1.0})
