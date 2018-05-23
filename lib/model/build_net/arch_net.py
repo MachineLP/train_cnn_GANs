@@ -119,7 +119,7 @@ def discriminator(inputs,
         for i in xrange(int(log(inp_shape, 2))):
           scope = 'conv%i' % (i + 1)
           current_depth = depth * 2**i
-          normalizer_fn_ = None if i == 0 else normalizer_fn
+          normalizer_fn_ = None if i == 0 else None #normalizer_fn
           net = slim.conv2d( net, current_depth, normalizer_fn=normalizer_fn_, scope=scope)
           end_points[scope] = net
 
@@ -182,7 +182,7 @@ def generator(inputs,
   with tf.variable_scope(scope, values=[inputs], reuse=reuse) as scope:
     with slim.arg_scope([normalizer_fn], **normalizer_fn_args):
       with slim.arg_scope([slim.conv2d_transpose],
-                          normalizer_fn=normalizer_fn,
+                          #normalizer_fn=normalizer_fn,
                           stride=2,
                           kernel_size=4):
         net = tf.expand_dims(tf.expand_dims(inputs, 1), 1)
