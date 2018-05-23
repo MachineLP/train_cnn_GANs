@@ -104,11 +104,11 @@ def train_GANs(train_data,train_label,valid_data,valid_label,train_dir,num_class
     else:
         learning_rate = learning_rate_base
     if arch_model == "arch_dcgan_unconditional":
-        G_optimizer = train_op(learning_rate*10, G_loss, G_vars, global_step)
-        D_optimizer = train_op(learning_rate, D_loss, D_vars, global_step)
+        G_optimizer = train_op(learning_rate, G_loss, G_vars, global_step)
+        D_optimizer = train_op(learning_rate*0.1, D_loss, D_vars, global_step)
     elif arch_model == "arch_dcgan_conditional":
-        G_optimizer = train_op(learning_rate*10, G_loss, G_vars, global_step)
-        D_optimizer = train_op(learning_rate, D_loss, D_vars, global_step)
+        G_optimizer = train_op(learning_rate, G_loss, G_vars, global_step)
+        D_optimizer = train_op(learning_rate*0.1, D_loss, D_vars, global_step)
     else:
         print ('{} is error!', arch_model)
 
