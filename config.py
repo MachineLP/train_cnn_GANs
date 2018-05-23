@@ -28,7 +28,7 @@ EARLY_STOP_PATIENCE = 1000
     'conditional': (1e-4, 1e-3),
 '''
 learning_r_decay = True
-learning_rate_base = 0.0001
+learning_rate_base = 0.001
 decay_rate = 0.95
 height, width = 32,32 #224, 224
 # 模型保存的路径
